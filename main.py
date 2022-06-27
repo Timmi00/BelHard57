@@ -1,7 +1,8 @@
 count = 0
 while count == 0:
-  word = input()
-  if word != 'hello':\
-    print('wrong')
-  if word == 'hello':
-    count +=1
+    word = input()
+    if 'hello' != word:
+        print('wrong')
+    if 'hello' == word:
+        count += 1
+import this
