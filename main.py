@@ -1,4 +1,4 @@
-count = 0
+count: int = 0
 while count == 0:
     word = input()
     if 'hello' != word:
