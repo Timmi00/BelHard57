@@ -5,4 +5,4 @@ while count == 0:
         print('wrong')
     if word == 'hello':
         count += 1
-import this
+print('hello')
