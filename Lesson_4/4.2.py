@@ -9,6 +9,5 @@ User_list = str((input().upper()))
 #         Dict_for_letters[n] = 1
 #     else:
 #         Dict_for_letters[n] += 1
-Count: int = len(User_list)
-Dict_for_letters = {User_list[i]: len(re.findall(User_list[i], User_list)) for i in range(0, Count)}
-print(Dict_for_letters.items())
+print({User_list[i]: User_list.count(User_list[i]) for i in range(0, len(User_list))})
+
