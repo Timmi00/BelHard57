@@ -2,7 +2,5 @@
 # значениями вложенный словарь с ключами "name" и "email", а значения
 # для этих ключей будут браться с клавиатуры
 Name_email = (input()).split(' ')
-Name: list[str] = Name_email[:: 2]
-Email: list[str] = Name_email[1::2]
-Count: int = round(len(Name_email)/2)
-print({i: {'Name': Name[i], 'Email': Email[i]} for i in range(0, Count)})
+Count_words: int = len(Name_email)
+print({round(i/2): {'Name': Name_email[i], 'Email': Name_email[i+1]} for i in range(0, Count_words, 2)})
