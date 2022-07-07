@@ -3,17 +3,22 @@ try:
     number_n = int(input('Введите число: '))
 except ValueError:
     number_n = int(input('Ведите число, а не строку: '))
-start_number = 2
-count: int = 0
-while number_n:
-    if count == 5:
+# start_number = 0
+# count: int = 0
+# while number_n:
+#     if count == 5:
+#         print('\n')
+#         count = 0
+#     if number_n < 2:
+#         break
+#     start_number += 2
+#     print(start_number, end=' ')
+#     number_n -= 2
+#     count += 1
+count_int: int = 0
+for i in range(2, number_n + 1, 2):
+    count_int += 1
+    print(i, end=' ')
+    if count_int == 5:
         print('\n')
-        count = 0
-    if not start_number % 2 and number_n > 1:
-        print(start_number, end=' ')
-        start_number += 1
-        count += 1
-        number_n -= 1
-    else:
-        number_n -= 1
-        start_number += 1
+        count_int = 0
