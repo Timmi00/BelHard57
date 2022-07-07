@@ -6,5 +6,4 @@ for i in range(len(user_string) - 1):
     if user_string[i] == user_string[i + 1]:
         res_str = user_string[i] + user_string[i+1]
         res_dict.setdefault(res_str, user_string.count(res_str))
-print('Повторяющиеся пары символов: ', res_dict)
 print('Общее количество повторений: ', sum(res_dict.values()))
