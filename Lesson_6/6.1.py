@@ -1,9 +1,9 @@
 # Написать функцию перевода десятичного числа в двоичное и обратно, без
 # использования функции int
+user_number = int(input())
 
 
-def dec_bin_dec():
-    num = 8
+def dec_bin_dec(num):
     number_bin = ''
     number_dec = 0
     while num:
@@ -14,4 +14,4 @@ def dec_bin_dec():
     return number_bin, number_dec
 
 
-print(dec_bin_dec())
+print(dec_bin_dec(user_number))
