@@ -3,7 +3,9 @@
 # (словари в помощь)
 
 
-def morze(string):
+def morze():
+    string = input().lower()
+    result_string: str = ''
     dict_for_letters = {' ': '   ', '1': '.----', '2': '..---', '3': "...--", '4': '....-', '5': '.....', '6': '-....',
                         '7': '--...', '8': '---..', '9': '----.',
                         'a': '.-', 'b': '—•••', 'c': '—•—•', 'd': '—••', 'e': '•', 'f': '••—•', 'g': '——•', 'h': '••••',
@@ -13,11 +15,13 @@ def morze(string):
                         's': '•••',
                         't': '—',
                         'u': '••—', 'v': '•••—', 'w': '•——', 'x': '—••—', 'y': '—•——', 'z': '——••'}
-    result_string: str = ''
-    for i in string:
-        result_string += dict_for_letters[i]+' '
-    return result_string
+    try:
+        for i in string:
+            result_string += dict_for_letters[i]+' '
+    except KeyError:
+        result_string: str = ''
+        morze()
+    return print(result_string)
 
 
-user_string = input().lower()
-print(morze(user_string))
+morze()
