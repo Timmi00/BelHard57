@@ -7,11 +7,9 @@ user_dict: dict = {
     99: {"f_name": 'Alex', "l_name": 'Coach', "tel_number": '375299999999', "email": 'coach@tut.by'},
     6: {"f_name": 'Dima', "l_name": 'Gocha', "tel_number": '37527654387'},
     3: {"f_name": 'Ivan', "l_name": 'Ivanov', "tel_number": '375299301835', 'email': 'python@python.py'},
-    19: {"f_name": 'Vasya', "l_name": 'Tishkevich', "tel_number": '375299301835', "email": ''},
+    19: {"f_name": 'Vasya', "l_name": 'Tishkevich', "tel_number": '37522121211821', "email": ''},
+    192: {"f_name": 'Petya', "l_name": 'Petrov', "tel_number": '3752991212135', 'email': 'peth@python.py'}
 }
 for key, value in user_dict.items():
-    try:
-        if not value["email"]:
-            print(value['f_name'])
-    except KeyError as exc:
+    if 'email' not in user_dict[key] or user_dict[key].get("email") == '':
         print(value['f_name'])
