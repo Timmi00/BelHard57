@@ -19,8 +19,7 @@ def morze():
         for i in string:
             result_string += dict_for_letters[i]+' '
     except KeyError:
-        result_string: str = ''
-        morze()
+        return morze()
     return print(result_string)
 
 
