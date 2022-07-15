@@ -10,4 +10,4 @@ for i in range(1, n * m + 1):
     x += dx
     y += dy
 for line in matrix:
-    print(*(f'{i:<3}' for i in line), sep='')
+    print(*(f'{i:<9}' for i in line), sep='')
